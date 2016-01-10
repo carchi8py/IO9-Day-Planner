@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Day Planner-->
@@ -16,7 +17,68 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uus-O4-dbF">
+                                <rect key="frame" x="20" y="72" width="560" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="zUV-7z-j0J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="83%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuj-bB-eyU">
+                                <rect key="frame" x="20" y="132" width="560" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="dUp-aN-854"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="68"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="83%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggy-2g-nDm">
+                                <rect key="frame" x="20" y="529" width="560" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="Seh-4B-qgT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="68"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7s-kz-MRX">
+                                <rect key="frame" x="20" y="469" width="560" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="3VE-QW-6gC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="day_planner.png" translatesAutoresizingMaskIntoConstraints="NO" id="vsb-7Z-eUc">
+                                <rect key="frame" x="225" y="203" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="NA1-cd-di0"/>
+                                    <constraint firstAttribute="width" constant="150" id="wws-S7-H0C"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ggy-2g-nDm" firstAttribute="top" secondItem="Z7s-kz-MRX" secondAttribute="bottom" constant="8" id="0EX-pn-31Y"/>
+                            <constraint firstItem="kuj-bB-eyU" firstAttribute="top" secondItem="uus-O4-dbF" secondAttribute="bottom" constant="8" id="0zl-mv-epX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ggy-2g-nDm" secondAttribute="bottom" constant="8" id="9os-l1-xdx"/>
+                            <constraint firstItem="kuj-bB-eyU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="LTp-iW-2g3"/>
+                            <constraint firstItem="ggy-2g-nDm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="NWM-Yg-rDo"/>
+                            <constraint firstItem="uus-O4-dbF" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="XXl-0J-jsZ"/>
+                            <constraint firstItem="vsb-7Z-eUc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZZo-bC-BJJ"/>
+                            <constraint firstItem="uus-O4-dbF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="a9u-xT-RRc"/>
+                            <constraint firstItem="uus-O4-dbF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="aDN-u2-HT7"/>
+                            <constraint firstItem="Z7s-kz-MRX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jVj-IE-crv"/>
+                            <constraint firstItem="vsb-7Z-eUc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="siw-WU-Vll"/>
+                            <constraint firstItem="kuj-bB-eyU" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="wZQ-z7-jpZ"/>
+                            <constraint firstItem="ggy-2g-nDm" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="wms-Aa-PpG"/>
+                            <constraint firstItem="Z7s-kz-MRX" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="zRI-gR-0wX"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Day Planner" id="viG-OZ-z96">
                         <barButtonItem key="rightBarButtonItem" title="Tasks" id="kbB-Hb-rzH">
@@ -109,6 +171,9 @@
             <point key="canvasLocation" x="710" y="849"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="day_planner.png" width="300" height="300"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="L0H-kX-t6g"/>
     </inferredMetricsTieBreakers>

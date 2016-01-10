@@ -15,6 +15,7 @@
 		27FBBECD1C42113E00F81DC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27FBBECB1C42113E00F81DC5 /* LaunchScreen.storyboard */; };
 		27FBBED81C42113E00F81DC5 /* Day_PlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FBBED71C42113E00F81DC5 /* Day_PlannerTests.swift */; };
 		27FBBEE31C42113F00F81DC5 /* Day_PlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FBBEE21C42113F00F81DC5 /* Day_PlannerUITests.swift */; };
+		27FBBEF11C421D6400F81DC5 /* day_planner.png in Resources */ = {isa = PBXBuildFile; fileRef = 27FBBEF01C421D6400F81DC5 /* day_planner.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		27FBBEDE1C42113F00F81DC5 /* Day PlannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Day PlannerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27FBBEE21C42113F00F81DC5 /* Day_PlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day_PlannerUITests.swift; sourceTree = "<group>"; };
 		27FBBEE41C42113F00F81DC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27FBBEF01C421D6400F81DC5 /* day_planner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = day_planner.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				27FBBEBF1C42113E00F81DC5 /* AppDelegate.swift */,
 				27FBBEC11C42113E00F81DC5 /* ViewController.swift */,
 				27FBBEC31C42113E00F81DC5 /* Main.storyboard */,
+				27FBBEF01C421D6400F81DC5 /* day_planner.png */,
 				27FBBEC91C42113E00F81DC5 /* Assets.xcassets */,
 				27FBBECB1C42113E00F81DC5 /* LaunchScreen.storyboard */,
 				27FBBECE1C42113E00F81DC5 /* Info.plist */,
@@ -235,6 +238,7 @@
 				27FBBECD1C42113E00F81DC5 /* LaunchScreen.storyboard in Resources */,
 				27FBBECA1C42113E00F81DC5 /* Assets.xcassets in Resources */,
 				27FBBEC51C42113E00F81DC5 /* Main.storyboard in Resources */,
+				27FBBEF11C421D6400F81DC5 /* day_planner.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
