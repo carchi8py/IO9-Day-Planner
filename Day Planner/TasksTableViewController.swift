@@ -100,23 +100,43 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return (self.fetchedResultsController.sections?.count)!
+    }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if self.fetchedResultsController.sections?.count > 0 {
+            let sectionInfo = self.fetchedResultsController.sections![section] as NSFetchedResultsSectionInfo
+            return sectionInfo.name
+        } else {
+            return ""
+        }
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        if  self.fetchedResultsController.sections?.count > 0 {
+            let sectionInfo = self.fetchedResultsController.sections![section] as NSFetchedResultsSectionInfo
+            return sectionInfo.numberOfObjects
+        } else {
+            return 1
+        }
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
 
-        // Configure the cell...
+        self.configureCell(cell, atIndexPath: indexPath)
 
         return cell
     }
-    */
+    
+    func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
+        let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
+        cell.textLabel?.text = object.valueForKey("taskDescription")!.description
+        let taskStatus = object.valueForKey("taskStatus")!.description
+        cell.detailTextLabel?.font = UIFont(name: "Avenir-Medium", size: 12.0)
+        cell.detailTextLabel?.text = taskStatus
+    }
 
     /*
     // Override to support conditional editing of the table view.
