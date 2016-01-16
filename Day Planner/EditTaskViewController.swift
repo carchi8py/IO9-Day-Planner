@@ -41,6 +41,27 @@ class EditTaskViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let task: AnyObject = self.taskItem {
+            taskTextField.text = task.valueForKey("taskDescription")!.description
+            let dateString = task.valueForKey("taskDate")!.description
+            let formatter = NSDateFormatter()
+            formatter.dateFormat = "dd-MMM-yyyy"
+            var date = formatter.dateFromString(dateString)
+            datePicker.setDate(date!, animated: true)
+            
+            if task.valueForKey("taskStatus")!.description == "Complete" {
+                statusSwitch.on = true
+                taskStatusLabel.text = "Complete"
+            } else {
+                statusSwitch.on = false
+                taskStatusLabel.text = "Open"
+            }
+        }
+    }
+    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
