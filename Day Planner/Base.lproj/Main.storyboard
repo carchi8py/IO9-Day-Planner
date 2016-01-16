@@ -87,6 +87,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="todaysPrecentageLabel" destination="kuj-bB-eyU" id="Nrk-tp-a8P"/>
+                        <outlet property="totalPrecentageLabel" destination="ggy-2g-nDm" id="Tyo-d6-OlE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
