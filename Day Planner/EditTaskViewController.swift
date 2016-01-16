@@ -89,6 +89,58 @@ class EditTaskViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func saveButtonPressed(sender: AnyObject) {
+        if taskTextField.text == "" {
+            let alertController = UIAlertController(title: "Error", message: "You must provied a task to save/edit", preferredStyle: .Alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
+        } else {
+            if saveButton.titleLabel?.text == "Save" {
+                let date = datePicker.date
+                let formatter = NSDateFormatter()
+                formatter.dateFormat = "dd-MMM-yyyy"
+                
+                let newTask = NSEntityDescription.insertNewObjectForEntityForName("Tasks", inManagedObjectContext: context) as NSManagedObject
+                newTask.setValue(taskTextField.text, forKey: "taskDescription")
+                newTask.setValue(formatter.stringFromDate(date), forKey: "taskDate")
+                newTask.setValue(taskStatusLabel.text, forKey: "taskStatus")
+                newTask.setValue(date, forKey: "taskDateStamp")
+                
+                do {
+                    try context.save()
+                    self.view.endEditing(true)
+                    let alertController = UIAlertController(title: "Success", message: "Record Saved", preferredStyle: .Alert)
+                    alertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                    self.presentViewController(alertController, animated: true, completion: nil)
+                } catch _ {
+                    let alertController = UIAlertController(title: "Error", message: "Error in saving the record", preferredStyle: .Alert)
+                    alertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                    self.presentViewController(alertController, animated: true, completion: nil)
+                }
+            } else {
+                if let task: AnyObject = self.taskItem {
+                    let date = datePicker.date
+                    let formatter = NSDateFormatter()
+                    formatter.dateFormat = "dd-MMM-yyyy"
+                    
+                    task.setValue(taskTextField.text, forKey: "taskDescription")
+                    task.setValue(taskStatusLabel.text, forKey: "taskStatus")
+                    task.setValue(formatter.stringFromDate(date), forKey: "taskDate")
+                    task.setValue(date, forKey: "taskDateStamp")
+                    
+                    do {
+                        try context.save()
+                        self.view.endEditing(true)
+                        let alertController = UIAlertController(title: "Success", message: "Record Update", preferredStyle: .Alert)
+                        alertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                        self.presentViewController(alertController, animated: true, completion: nil)
+                    } catch _ {
+                        let alertController = UIAlertController(title: "Error", message: "Error in updateing the record", preferredStyle: .Alert)
+                        alertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                        self.presentViewController(alertController, animated: true, completion: nil)
+                    }
+                }
+            }
+        }
     }
     
     /*
