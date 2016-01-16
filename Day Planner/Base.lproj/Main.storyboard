@@ -135,7 +135,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Tasks" id="WPF-t7-M5f">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="U9S-97-2op"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="U9S-97-2op">
+                            <connections>
+                                <action selector="backPressed:" destination="2SU-fX-FjD" id="lQt-yO-hYm"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Xlo-9S-38F">
                             <connections>
                                 <segue destination="I39-PH-msR" kind="show" identifier="newTask" id="Gdk-O1-f3z"/>
@@ -150,7 +154,7 @@
         <!--Edit Task-->
         <scene sceneID="Hee-L2-C0j">
             <objects>
-                <viewController id="I39-PH-msR" sceneMemberID="viewController">
+                <viewController id="I39-PH-msR" customClass="EditTaskViewController" customModule="Day_Planner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="I3E-fI-4Vf"/>
                         <viewControllerLayoutGuide type="bottom" id="Z5Q-CU-bcX"/>
@@ -259,7 +263,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AXh-Fa-fAg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2927" y="849"/>
+            <point key="canvasLocation" x="3049" y="849"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0u5-iD-gha">

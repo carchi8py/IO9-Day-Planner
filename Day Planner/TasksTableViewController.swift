@@ -32,6 +32,10 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func backPressed(sender: AnyObject) {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
     // MARK: - Fetched Results Controller
     var _fetchedResultsController: NSFetchedResultsController? = nil
     var fetchedResultsController: NSFetchedResultsController {
@@ -175,14 +179,24 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     }
     */
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let controller = segue.destinationViewController as! EditTaskViewController
+        if segue.identifier == "editTask" {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
+                controller.taskItem = object
+                controller.newTask = false
+            }
+        } else if segue.identifier == "newTask" {
+            controller.newTask = true
+        }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+
 
 }

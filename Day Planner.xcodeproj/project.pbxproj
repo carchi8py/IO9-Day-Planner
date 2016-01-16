@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		27DE3F501C4A0E2F002D3914 /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DE3F4F1C4A0E2F002D3914 /* TasksTableViewController.swift */; };
+		27DE3F521C4A1855002D3914 /* EditTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DE3F511C4A1855002D3914 /* EditTaskViewController.swift */; };
 		27FBBEC01C42113E00F81DC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FBBEBF1C42113E00F81DC5 /* AppDelegate.swift */; };
 		27FBBEC21C42113E00F81DC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FBBEC11C42113E00F81DC5 /* ViewController.swift */; };
 		27FBBEC51C42113E00F81DC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27FBBEC31C42113E00F81DC5 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		27DE3F4F1C4A0E2F002D3914 /* TasksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
+		27DE3F511C4A1855002D3914 /* EditTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTaskViewController.swift; sourceTree = "<group>"; };
 		27FBBEBC1C42113E00F81DC5 /* Day Planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Day Planner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27FBBEBF1C42113E00F81DC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27FBBEC11C42113E00F81DC5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				27FBBECE1C42113E00F81DC5 /* Info.plist */,
 				27FBBEC61C42113E00F81DC5 /* Day_Planner.xcdatamodeld */,
 				27DE3F4F1C4A0E2F002D3914 /* TasksTableViewController.swift */,
+				27DE3F511C4A1855002D3914 /* EditTaskViewController.swift */,
 			);
 			path = "Day Planner";
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			files = (
 				27FBBEC81C42113E00F81DC5 /* Day_Planner.xcdatamodeld in Sources */,
 				27FBBEC21C42113E00F81DC5 /* ViewController.swift in Sources */,
+				27DE3F521C4A1855002D3914 /* EditTaskViewController.swift in Sources */,
 				27DE3F501C4A0E2F002D3914 /* TasksTableViewController.swift in Sources */,
 				27FBBEC01C42113E00F81DC5 /* AppDelegate.swift in Sources */,
 			);
