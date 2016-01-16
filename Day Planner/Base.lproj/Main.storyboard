@@ -95,7 +95,7 @@
         <!--Tasks-->
         <scene sceneID="SND-eH-cWn">
             <objects>
-                <tableViewController id="2SU-fX-FjD" sceneMemberID="viewController">
+                <tableViewController id="2SU-fX-FjD" customClass="TasksTableViewController" customModule="Day_Planner" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mxp-BB-VcE">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
